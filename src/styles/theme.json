@@ -1,0 +1,21 @@
+{
+  "colors": {
+    "grey": "#ebebea",
+    "blue": "#348fff",
+    "beige": "#ecd8c1",
+    "black": "#100a0a",
+    "white": "#ffffff"
+  },
+  "y": {
+    "footer_desk": "6rem"
+  },
+  "x": {
+    "max": "1200rem"
+  },
+  "z": {
+    "footer": 9000
+  },
+  "fx": {
+    "shadow": "0px -2px 24px -2px rgba(0,0,0,0.4)"
+  }
+}
