@@ -1,7 +1,7 @@
-import Footer from './Footer/Footer'
-import Fragment from './Fragment'
+import Header from './Header'
+import Footer from './Footer'
 
 export {
-  Footer,
-  Fragment
+  Header,
+  Footer
 }

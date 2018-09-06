@@ -1,71 +1,25 @@
-import { h } from "hyperapp"
+import { h } from 'hyperapp'
 import { Link } from '@hyperapp/router'
-import picostyle, { keyframes } from "picostyle"
-const styled = picostyle(h) 
-
-import { colors, y } from './theme.json'
+import picostyle from 'picostyle'
+const styled = picostyle(h)
+import * as _ from './mixins'
+import { colors, height } from './theme.json'
 
 const Main = styled('main')({
-  height: '100vh',
-  width: '100vw',
-  background: colors.black,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'flex-start',
-  alignItems: 'flex-start',
-  padding: '3rem'
-})
-
-const bigType = {
-  fontFamily: 'authentic-sans',
-  letterSpacing: '1px',
-  color: colors.white,
-  fontSize: '10vmin',
-  fontWeight: '400',
-  lineHeight: '1.35'
-}
-
-const flexRow = {
-  display: 'flex',
-  flexDirection: 'row'
-}
-
-const FullRule = styled('hr')({
-  width: '100%'
+  ..._.flexColumn,
+  width: '100%',
+  paddingTop: `calc(${height.header.desk} +  ${_.spacingUnit(2)})`,
+  paddingLeft: _.spacingUnit(4),
+  paddingRight: _.spacingUnit(4),
+  paddingBottom: _.spacingUnit(4)
 })
 
 const H1 = styled('h1')({
-  ...bigType,
-})
-
-const zoom = keyframes({
-  from: {
-    transform: 'scale(0.5)'
-  },
-  to: {
-    transform: 'scale(2)'
-  },
-})
-
-const Markup = styled('div')({
-  '> *': {
-    ...bigType
-  },
-  '> p > a': {
-    ...bigType,
-    textDecoration: 'underline',
-  },
-  '> p > a:hover': {
-    textDecoration: 'line-through'
-  }
-})
-
-const Nav = styled('nav')({
-  ...flexRow
+  ..._.megaType(colors.white),
 })
 
 const NavLink = styled(Link)({
-  ...bigType,
+  ..._.smallType(colors.white),
   marginRight: '5vmin',
   ':hover': {
     textDecoration: 'line-through'
@@ -75,11 +29,23 @@ const NavLink = styled(Link)({
   }
 })
 
-module.exports = {
+const Markup = styled('div')({
+  '> p': {
+    ..._.bigType(colors.white),
+    marginBottom: _.spacingUnit(2)
+  },
+  '> p > a': {
+    ..._.bigType(colors.white),
+    textDecoration: 'underline',
+  },
+  '> p > a:hover': {
+    textDecoration: 'line-through'
+  }
+})
+
+export {
   Main,
   H1,
-  Markup,
-  FullRule,
-  Nav,
-  NavLink
+  NavLink,
+  Markup
 }

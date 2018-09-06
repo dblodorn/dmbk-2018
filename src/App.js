@@ -1,19 +1,18 @@
 import { h } from 'hyperapp'
-import { Link, Route, Switch } from '@hyperapp/router'
+import { Route, Switch } from '@hyperapp/router'
 import { state, actions } from './state'
+import { Header } from './components'
 import { Home, About, NotFound } from './views'
-import { Main, FullRule, Nav, NavLink } from './styles'
+import { Main } from './styles'
 
 export default (state, actions) =>
-  <Main oncreate={() => actions.getApiData()}>
-    <Nav>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/about">About</NavLink>
-    </Nav>
-    <FullRule/>
-    <Switch>
-      <Route path="/" render={Home} />
-      <Route path="/about" render={About}/>
-      <Route render={NotFound} />
-    </Switch>
-  </Main>
+  <div>
+    <Header state={state} actions={actions}/>
+    <Main oncreate={() => actions.getApiData()}>
+      <Switch>
+        <Route path="/" render={props => Home(state, actions)}/>
+        <Route path="/about" render={props => About(state, actions)}/>
+        <Route render={NotFound}/>
+      </Switch>
+    </Main>
+  </div>
