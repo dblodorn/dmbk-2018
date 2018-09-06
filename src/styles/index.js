@@ -9,10 +9,16 @@ const Main = styled('main')({
   ..._.flexColumn,
   width: '100%',
   paddingTop: _.topSpacing,
-  paddingLeft: _.spacingUnit(4),
-  paddingRight: _.spacingUnit(4),
-  paddingBottom: _.spacingUnit(4),
-  zIndex: z.main
+  paddingLeft: _.spacingUnit(2),
+  paddingRight: _.spacingUnit(2),
+  paddingBottom: _.spacingUnit(2),
+  zIndex: z.main,
+  '@media (min-width: 1240px)': {
+    paddingTop: _.topSpacing,
+    paddingLeft: _.spacingUnit(4),
+    paddingRight: _.spacingUnit(4),
+    paddingBottom: _.spacingUnit(4)
+  }
 })
 
 const H1 = styled('h1')({
