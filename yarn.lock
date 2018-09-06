@@ -12,6 +12,10 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@hyperapp/router/-/router-0.7.0.tgz#99fde37696d07949514c3519db1fe6785a053d2d"
 
+"@hyperapp/transitions@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@hyperapp/transitions/-/transitions-1.0.2.tgz#dc3093ce71cecca118c1248ca82e75065bfa5e4c"
+
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.5.13.tgz#81155a570bd5803a30ec31436bc2c9c0ede38f25"

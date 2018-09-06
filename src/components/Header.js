@@ -22,9 +22,9 @@ const HeaderWrapper = styled('header')({
   width: '100%',
   height: height.header.desk,
   position: 'fixed',
-  zIndex: z.header,
   bottom: 0,
-  left: 0
+  left: 0,
+  zIndex: '9000'
 })
 
 const Nav = styled('nav')({

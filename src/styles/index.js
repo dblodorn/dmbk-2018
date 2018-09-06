@@ -3,15 +3,16 @@ import { Link } from '@hyperapp/router'
 import picostyle from 'picostyle'
 const styled = picostyle(h)
 import * as _ from './mixins'
-import { colors, height } from './theme.json'
+import { colors, z } from './theme.json'
 
 const Main = styled('main')({
   ..._.flexColumn,
   width: '100%',
-  paddingTop: `calc(${height.header.desk} +  ${_.spacingUnit(2)})`,
+  paddingTop: _.topSpacing,
   paddingLeft: _.spacingUnit(4),
   paddingRight: _.spacingUnit(4),
-  paddingBottom: _.spacingUnit(4)
+  paddingBottom: _.spacingUnit(4),
+  zIndex: z.main
 })
 
 const H1 = styled('h1')({

@@ -8,6 +8,8 @@ export const spacingUnit = multiply => {
   return `${units.spacing * multiply}rem`
 }
 
+export const topSpacing = `calc(${height.header.desk} +  ${spacingUnit(2)})`
+
 // TYPOGRPAHY
 const sansFontA = {
   fontFamily: type.fonts.sans,
