@@ -8,7 +8,7 @@ import { colors, z } from './theme.json'
 const Main = styled('main')({
   ..._.flexColumn,
   width: '100%',
-  paddingTop: _.topSpacing,
+  paddingTop: _.topSpacingMobile,
   paddingLeft: _.spacingUnit(2),
   paddingRight: _.spacingUnit(2),
   paddingBottom: _.spacingUnit(2),
