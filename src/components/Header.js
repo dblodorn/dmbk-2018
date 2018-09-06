@@ -5,12 +5,29 @@ import { flexRowCenteredVert, flexRow, spacingUnit } from './../styles/mixins'
 import { height, z } from './../styles/theme.json'
 const styled = picostyle(h) 
 
+const returnActive = (e, props, slug) => {
+  console.log(e, props.state, slug)
+}
+
+const navigation = [
+  {
+    page: 'Home',
+    slug: '/'
+  },{
+    page: 'About',
+    slug: '/about'
+  }
+]
+
 export default (props) => {
   return (
     <HeaderWrapper>
       <Nav>
-        <NavLink to="/"><span>Home</span></NavLink>
-        <NavLink to="/about"><span>About</span></NavLink>
+        {navigation.map(({ page, slug }) => (
+          <NavLink to={slug} oncreate={(e) => {console.log(e)}} onclick={(e) => returnActive(e, props, slug)}>
+            <span>{page}</span>
+          </NavLink>
+        ))}
       </Nav>
     </HeaderWrapper>
   )
