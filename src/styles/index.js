@@ -8,16 +8,10 @@ import { colors, z } from './theme.json'
 const Main = styled('main')({
   ..._.flexColumn,
   width: '100%',
-  paddingTop: _.topSpacingMobile,
-  paddingLeft: _.spacingUnit(2),
-  paddingRight: _.spacingUnit(2),
-  paddingBottom: _.spacingUnit(2),
   zIndex: z.main,
+  padding: `${_.topSpacingMobile} ${_.spacingUnit(2)} ${_.spacingUnit(2)}`,
   '@media (min-width: 1240px)': {
-    paddingTop: _.topSpacing,
-    paddingLeft: _.spacingUnit(4),
-    paddingRight: _.spacingUnit(4),
-    paddingBottom: _.spacingUnit(4)
+    padding: `${_.topSpacing} ${_.spacingUnit(4)} ${_.spacingUnit(4)}`
   }
 })
 
