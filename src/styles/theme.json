@@ -31,7 +31,7 @@
         "mobile": "2rem"
       },
       "small": {
-        "desk": "2.5vmin",
+        "desk": "1.75rem",
         "mobile": "1.5rem"
       },
       "micro": {

@@ -14,6 +14,9 @@ const navigation = [
     page: 'Home',
     slug: '/'
   },{
+    page: 'Work',
+    slug: '/work'
+  },{
     page: 'About',
     slug: '/about'
   }
@@ -24,7 +27,7 @@ export default (props) => {
     <HeaderWrapper>
       <Nav>
         {navigation.map(({ page, slug }) => (
-          <NavLink to={slug} oncreate={(e) => {console.log(e)}} onclick={(e) => returnActive(e, props, slug)}>
+          <NavLink to={slug} class={(props.state.location.pathname == slug) && 'active'}>
             <span>{page}</span>
           </NavLink>
         ))}

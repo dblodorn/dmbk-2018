@@ -14,16 +14,14 @@ const dataController = (url, state) => {
 }
 
 const actions = {
+  setApiData: (res) => ({ api_data: res }),
+  setProjectData: (res) => ({ all_projects: flattenCategories(res.api_data.projects)}),
   getApiData: api_data => (state, actions) => dataController(API_URL, state)
     .then(response => response.json())
     .then(state.data_status = 'loaded')
     .then((res) => actions.setApiData(res))
     .then((res) => actions.setProjectData(res)),
-  setApiData: (res) => ({ api_data: res }),
-  setProjectData: (res) => ({ all_projects: flattenCategories(res.api_data.projects)}),
-  location: location.actions,
-  down: value => state => ({ count: state.count - value }),
-  up: value => state => ({ count: state.count + value }),
+  location: location.actions
 }
 
 export {

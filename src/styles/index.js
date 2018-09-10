@@ -27,7 +27,18 @@ const NavLink = styled(Link)({
   },
   ':last-child': {
     marginRight: '0'
+  },
+  '.active': {
+    textDecoration: 'line-through',
+    pointerEvents: 'none'
   }
+})
+
+const NavLinkLarge = styled(Link)({
+  ..._.megaType(colors.white),
+  ':hover': {
+    textDecoration: 'line-through'
+  },
 })
 
 const Markup = styled('div')({
@@ -48,5 +59,6 @@ export {
   Main,
   H1,
   NavLink,
+  NavLinkLarge,
   Markup
 }
