@@ -1,9 +1,11 @@
 import { state } from './state'
 import { location } from '@hyperapp/router'
+import { flattenCategories } from './../scripts'
 
 const API_URL = 'https://dmbk.io/wp-json/dmbk-io-api/v1/core'
 
-const dataController = (url) => {
+const dataController = (url, state) => {
+  state.data_status = 'fetching'
   return new Promise((resolve, reject) => {
     fetch(url, { method: 'GET'})
       .then(res => resolve(res))
@@ -12,10 +14,13 @@ const dataController = (url) => {
 }
 
 const actions = {
-  getApiData: api_data => (state, actions) => dataController(API_URL)
+  getApiData: api_data => (state, actions) => dataController(API_URL, state)
     .then(response => response.json())
-    .then((res) => actions.setApiData(res)),
+    .then(state.data_status = 'loaded')
+    .then((res) => actions.setApiData(res))
+    .then((res) => actions.setProjectData(res)),
   setApiData: (res) => ({ api_data: res }),
+  setProjectData: (res) => ({ all_projects: flattenCategories(res.api_data.projects)}),
   location: location.actions,
   down: value => state => ({ count: state.count - value }),
   up: value => state => ({ count: state.count + value }),
