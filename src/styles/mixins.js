@@ -86,6 +86,10 @@ export const microType = (color) => {
   }
 }
 
+export const hoverCursor = {
+  cursor: 'url(../assets/images/icons/cursor-hover.svg) 12 12, auto'
+}
+
 // FLEX UTILS
 export const flexRow = {
   display: 'flex',

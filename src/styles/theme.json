@@ -1,10 +1,13 @@
 {
   "colors": {
     "grey": "#ebebea",
-    "blue": "#348fff",
     "beige": "#ecd8c1",
     "black": "#100a0a",
-    "white": "#ffffff"
+    "white": "#ffffff",
+    "blue": "#0d75ff",
+    "yellow": "#f2ff26",
+    "red": "#a93400",
+    "green": "#94FF94"
   },
   "breakpoints": {
     "desk": 1240

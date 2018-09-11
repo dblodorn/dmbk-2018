@@ -38,6 +38,10 @@
     html {
       font-size: 58%;
       -webkit-font-smoothing: antialiased;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      cursor: url(assets/images/icons/cursor-full.svg) 12 12, auto;
     }
     @media screen and (min-width: 960px) {
       html {
@@ -80,19 +84,19 @@
     }
     /* width */
     ::-webkit-scrollbar {
-      width: 2px;
+      width: 4px;
     }
     /* Track */
     ::-webkit-scrollbar-track {
-      background: #111; 
+      background: #222;
     }
     /* Handle */
     ::-webkit-scrollbar-thumb {
-      background: #dbdbdb; 
+      background: #94FF94;
     }
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-      background: #555; 
+      background: #0d75ff; 
     }
   </style>
 </head>

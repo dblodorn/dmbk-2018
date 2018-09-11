@@ -23,7 +23,9 @@ const NavLink = styled(Link)({
   ..._.smallType(colors.white),
   marginRight: '5vmin',
   ':hover': {
-    textDecoration: 'line-through'
+    ..._.hoverCursor,
+    textDecoration: 'line-through',
+    color: colors.blue
   },
   ':last-child': {
     marginRight: '0'
@@ -37,7 +39,9 @@ const NavLink = styled(Link)({
 const NavLinkLarge = styled(Link)({
   ..._.megaType(colors.white),
   ':hover': {
-    textDecoration: 'line-through'
+    ..._.hoverCursor,
+    textDecoration: 'line-through',
+    color: colors.blue
   },
 })
 
@@ -51,7 +55,9 @@ const Markup = styled('div')({
     textDecoration: 'underline',
   },
   '> p > a:hover': {
-    textDecoration: 'line-through'
+    ..._.hoverCursor,
+    textDecoration: 'line-through',
+    color: colors.blue
   }
 })
 
