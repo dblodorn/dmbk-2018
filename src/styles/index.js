@@ -3,15 +3,15 @@ import { Link } from '@hyperapp/router'
 import picostyle from 'picostyle'
 const styled = picostyle(h)
 import * as _ from './mixins'
-import { colors, z } from './theme.json'
+import { colors, z, type } from './theme.json'
 
 const Main = styled('main')({
   ..._.flexColumn,
   width: '100%',
   zIndex: z.main,
-  padding: `${_.topSpacingMobile} ${_.spacingUnit(2)} ${_.spacingUnit(2)}`,
+  padding: `${_.topSpacingMobile} ${_.spacingUnit(1)} ${_.spacingUnit(2)}`,
   '@media (min-width: 1240px)': {
-    padding: `${_.topSpacing} ${_.spacingUnit(4)} ${_.spacingUnit(4)}`
+    padding: `0 ${_.spacingUnit(0)} ${_.spacingUnit(4)}`
   }
 })
 
@@ -47,12 +47,18 @@ const NavLinkLarge = styled(Link)({
 
 const Markup = styled('div')({
   '> p': {
-    ..._.bigType(colors.white),
+    fontFamily: type.fonts.serif,
+    fontSize: type.sizes.big.desk,
+    letterSpacing: '1px',
+    color: colors.white,
+    lineHeight: '1.25',
+    fontWeight: '400',
     marginBottom: _.spacingUnit(2)
   },
   '> p > a': {
-    ..._.bigType(colors.white),
+    fontFamily: type.fonts.sans,
     textDecoration: 'underline',
+    color: colors.white
   },
   '> p > a:hover': {
     ..._.hoverCursor,
@@ -61,10 +67,15 @@ const Markup = styled('div')({
   }
 })
 
+const SectionTop = styled('section')({
+  marginTop: '-3.75rem'
+})
+
 export {
   Main,
   H1,
   NavLink,
   NavLinkLarge,
-  Markup
+  Markup,
+  SectionTop
 }

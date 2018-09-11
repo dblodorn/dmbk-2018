@@ -1,11 +1,11 @@
 import { h } from 'hyperapp'
-import { Markup } from './../styles'
+import { Markup, SectionTop } from './../styles'
 import { setHTML } from './../scripts'
 import { TransitionInOut } from './../components'
 
 export default (state, actions) =>
   <TransitionInOut>
-    <section key={'about'}>
+    <SectionTop key={'about'}>
       {(state.api_data) && <Markup oncreate={setHTML(state.api_data.options.intro)}/>}
-    </section>
+    </SectionTop>
   </TransitionInOut>

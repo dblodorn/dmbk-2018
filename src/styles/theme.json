@@ -14,7 +14,8 @@
   },
   "type": {
     "fonts": {
-      "sans": "'authentic-sans', system-ui, sans-serif"
+      "sans": "'authentic-sans', system-ui, sans-serif",
+      "serif": "'knif-mono', Times New Roman, serif"
     },
     "sizes": {
       "mega": {
@@ -22,7 +23,7 @@
         "mobile": "4rem"
       },
       "big": {
-        "desk": "7vmin",
+        "desk": "25vmin",
         "mobile": "3rem"
       },
       "medium": {

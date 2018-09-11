@@ -18,15 +18,16 @@ const sansFontA = {
   fontWeight: '400',
 }
 
+const serifFontA = {
+  fontFamily: type.fonts.serif,
+  fontWeight: '400',
+}
+
 const fontSizeMega = {
   fontSize: type.sizes.mega.mobile,
   '@media (min-width: 1240px)': {
     fontSize: type.sizes.mega.desk
   }
-}
-
-const fontSizeBig = {
-  fontSize: type.sizes.big.desk
 }
 
 export const megaType = (color) => {
@@ -35,16 +36,6 @@ export const megaType = (color) => {
     ...sansFontA,
     letterSpacing: '1px',
     wordSpacing: '.5vmin',
-    color: color,
-    lineHeight: '1.35'
-  }
-}
-
-export const bigType = (color) => {
-  return {
-    ...sansFontA,
-    fontSize: type.sizes.big.desk,
-    letterSpacing: '1px',
     color: color,
     lineHeight: '1.35'
   }
