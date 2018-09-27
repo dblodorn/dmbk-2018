@@ -181,15 +181,43 @@
                                     "post_type": [
                                         "website",
                                         "design",
-                                        "art"
+                                        "art",
+                                        "project"
                                     ],
-                                    "taxonomy": [],
+                                    "taxonomy": "",
                                     "allow_null": 1,
                                     "multiple": 0,
                                     "return_format": "object",
                                     "ui": 1
                                 }
                             ]
+                        },
+                        {
+                            "key": "field_5bad00f5cabd5",
+                            "label": "Projects",
+                            "name": "projects",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "project"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "object"
                         }
                     ],
                     "min": "",
@@ -224,5 +252,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1537990940
+    "modified": 1538065929
 }

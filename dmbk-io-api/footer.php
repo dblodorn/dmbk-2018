@@ -1,4 +1,5 @@
-<footer>
+</main>
+<footer class="fade-in">
   <article>
     <h3>DAIN M. BLODORN KIM</h3>
     <?php if ( have_rows('footer_links','option') ) : ?>
@@ -13,5 +14,5 @@
   </article>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/app.js" defer="defer"></script><?php wp_footer(); ?></body>
+<script src="<?php echo get_template_directory_uri(); ?>/app.js"></script><?php wp_footer(); ?></body>
 </html>

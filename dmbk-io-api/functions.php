@@ -25,6 +25,7 @@ function my_remove_menu_pages() {
 
 function my_theme_setup() {
   require_once( 'library/custom-post-type.php' );
+  require_once( 'library/custom-taxonomies.php' );
   require_once( 'api/api.php');
   add_theme_support( 'post-thumbnails' );
 }
