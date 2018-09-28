@@ -17,5 +17,4 @@ export default (input) => {
     })
   })
   return arr
-  console.log(arr)
 }

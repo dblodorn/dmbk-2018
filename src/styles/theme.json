@@ -23,7 +23,7 @@
         "mobile": "4rem"
       },
       "big": {
-        "desk": "25vmin",
+        "desk": "2vmin",
         "mobile": "3rem"
       },
       "medium": {

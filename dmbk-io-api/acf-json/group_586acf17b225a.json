@@ -147,52 +147,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_586ad0c0e67b5",
-                            "label": "portfolio items",
-                            "name": "portfolio_items",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "min": 0,
-                            "max": 0,
-                            "layout": "table",
-                            "button_label": "Add Row",
-                            "collapsed": "",
-                            "sub_fields": [
-                                {
-                                    "key": "field_586ad0f0e67b6",
-                                    "label": "portfolio item",
-                                    "name": "portfolio_item",
-                                    "type": "post_object",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "post_type": [
-                                        "website",
-                                        "design",
-                                        "art",
-                                        "project"
-                                    ],
-                                    "taxonomy": "",
-                                    "allow_null": 1,
-                                    "multiple": 0,
-                                    "return_format": "object",
-                                    "ui": 1
-                                }
-                            ]
-                        },
-                        {
                             "key": "field_5bad00f5cabd5",
                             "label": "Projects",
                             "name": "projects",
@@ -252,5 +206,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1538065929
+    "modified": 1538165728
 }
